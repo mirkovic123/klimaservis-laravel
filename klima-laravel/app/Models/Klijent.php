@@ -10,6 +10,12 @@ class Klijent extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ime_prezime',
+        'adresa',
+        'broj_telefona',
+    ];
+
     public function servisi()
     {
         return $this->hasMany(Servis::class);

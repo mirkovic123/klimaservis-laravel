@@ -10,6 +10,13 @@ class Firma extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'naziv',
+        'adresa',
+        'grad',
+        'sajt',
+    ];
+
     public function servisi()
     {
         return $this->hasMany(Servis::class);

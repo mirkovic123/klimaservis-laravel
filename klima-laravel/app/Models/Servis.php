@@ -11,6 +11,16 @@ class Servis extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'datum',
+        'tip',
+        'cena',
+        'serviser',
+        'napomena',
+        'klijent_id',
+        'firma_id',
+    ];
+
     public function firma()
     {
         return $this->belongsTo(Firma::class);

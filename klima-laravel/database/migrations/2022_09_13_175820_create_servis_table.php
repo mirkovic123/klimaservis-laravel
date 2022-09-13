@@ -21,7 +21,7 @@ class CreateServisTable extends Migration
             $table->string('serviser');
             $table->string('napomena');
             $table->foreignId('klijent_id')->constrained('klijents');
-            $table->foreignId('servis_id')->constrained('servis');
+            $table->foreignId('firma_id')->constrained('firmas');
             $table->timestamps();
         });
     }

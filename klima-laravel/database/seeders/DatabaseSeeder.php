@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Database\Seeders\FirmaSeeder;
+use Database\Seeders\KlijentSeeder;
+use Database\Seeders\ServisSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +16,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $firmaS = new FirmaSeeder();
+        $klijentS = new KlijentSeeder();
+        $servisS = new ServisSeeder();
+        $servisS->run();
+        $firmaS->run();
+        $klijentS->run();
     }
 }
